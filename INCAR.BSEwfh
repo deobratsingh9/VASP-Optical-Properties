@@ -1,0 +1,37 @@
+# --------------------------
+# General BSE settings
+# --------------------------
+ALGO = BSE                # BSE calculation
+NBSEEIG = 1               # number of exciton states to calculate/visualize
+BSEHOLE = 0.2998655394890010  0.7802711053000680  0.7483239054913785  # fix hole position (fractional coordinates)
+#BSEELECTRON = 0.2998655394890010  0.7802711053000680  0.7483239054913785  # alternatively, fix electron
+
+# --------------------------
+# Bands
+# --------------------------
+NBANDSV = 8               # number of valence bands used in BSE
+NBANDSO = 4               # number of occupied bands for optical transitions
+NBANDS  = 128             # total number of bands (valence + conduction + buffer)
+
+# --------------------------
+# FFT / Plane-wave settings
+# --------------------------
+ENCUT = 250               # plane-wave cutoff for wavefunction
+PREC = Normal             # precision
+ENCUTGW = 150             # cutoff for response function (must match WAVEDER generation)
+PRECFOCK = Normal         # precision for exact exchange
+
+# --------------------------
+# Optical / convergence
+# --------------------------
+ANTIRES = 0               # no anti-resonant terms (needed for exciton plotting)
+ISMEAR = 0
+SIGMA = 0.01
+EDIFF = 1E-8
+OMEGAMAX = 20             # max energy (eV) for response function
+
+# --------------------------
+# Wavefunction / Charge
+# --------------------------
+LWAVE = .TRUE.            # write WAVECAR (needed)
+LCHARG = .TRUE.           # write CHGCAR
